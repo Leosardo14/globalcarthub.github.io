@@ -7,43 +7,47 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     body { margin:0; font-family:'Poppins', sans-serif; background:#f8fafc; color:#0f172a; }
-    header { display:flex; justify-content:space-between; align-items:center; padding:20px 40px; background:white; box-shadow:0 2px 10px rgba(0,0,0,0.05); }
-    header h1 { color:#0f172a; font-weight:600; }
-    nav a { margin:0 15px; text-decoration:none; color:#334155; font-weight:500; }
-    nav a:hover { color:#22c55e; }
 
-    .hero { display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:100px 20px; background:linear-gradient(135deg,#22c55e,#16a34a); color:white; }
-    .hero h2 { font-size:48px; margin-bottom:10px; }
-    .hero p { font-size:18px; margin-bottom:20px; }
-    .btn { background:white; color:#16a34a; padding:12px 25px; border-radius:30px; text-decoration:none; font-weight:600; }
+    header { display:flex; justify-content:center; align-items:center; padding:15px; background:white; box-shadow:0 2px 10px rgba(0,0,0,0.05); }
+    header img { height:40px; }
 
-    .section { padding:60px 40px; max-width:1200px; margin:auto; }
-    .section h2 { text-align:center; margin-bottom:40px; }
+    .hero { text-align:center; padding:60px 20px; background:linear-gradient(135deg,#22c55e,#16a34a); color:white; }
+    .hero img { width:140px; margin-bottom:20px; }
+    .hero h2 { font-size:28px; }
+    .hero p { font-size:16px; }
 
-    .products { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; }
-    .card { background:white; border-radius:15px; overflow:hidden; box-shadow:0 10px 25px rgba(0,0,0,0.08); transition:0.3s; }
-    .card:hover { transform:translateY(-5px); }
-    .card img { width:100%; height:220px; object-fit:cover; }
+    .btn { display:inline-block; margin-top:15px; background:white; color:#16a34a; padding:10px 20px; border-radius:25px; text-decoration:none; font-weight:600; }
+
+    .section { padding:40px 20px; max-width:1200px; margin:auto; }
+    .section h2 { text-align:center; margin-bottom:30px; }
+
+    .products { display:grid; grid-template-columns:1fr; gap:20px; }
+
+    .card { background:white; border-radius:15px; overflow:hidden; box-shadow:0 10px 25px rgba(0,0,0,0.08); }
+    .card img { width:100%; height:200px; object-fit:cover; }
     .card-content { padding:15px; }
-    .card h3 { margin:10px 0; }
     .price { color:#16a34a; font-weight:600; }
     .buy-btn { display:block; margin-top:10px; text-align:center; background:#16a34a; color:white; padding:10px; border-radius:8px; text-decoration:none; }
 
-    footer { text-align:center; padding:30px; background:#0f172a; color:#94a3b8; margin-top:40px; }
+    footer { text-align:center; padding:20px; background:#0f172a; color:#94a3b8; }
+
+    /* DESKTOP */
+    @media(min-width:768px){
+      header { justify-content:space-between; padding:20px 40px; }
+      .hero h2 { font-size:48px; }
+      .products { grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); }
+      .hero img { width:200px; }
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>GlobalCartHub</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="shop.html">Shop</a>
-    <a href="contatti.html">Contatti</a>
-  </nav>
+  <img src="logo.png" alt="GlobalCartHub Logo">
 </header>
 
 <section class="hero">
+  <img src="logo.png">
   <h2>Scopri i migliori prodotti virali</h2>
   <p>Qualità, velocità e prezzi imbattibili</p>
   <a class="btn" href="shop.html">Vai allo Shop</a>
@@ -58,7 +62,7 @@
       <div class="card-content">
         <h3>Smartwatch Pro</h3>
         <p class="price">€39.99</p>
-        <a class="buy-btn" href="https://wa.me/3791232604ext=Voglio%20Smartwatch%20Pro">Compra ora</a>
+        <a class="buy-btn" href="https://wa.me/3791232604?text=Voglio%20Smartwatch%20Pro">Compra ora</a>
       </div>
     </div>
 
@@ -75,7 +79,7 @@
 </section>
 
 <footer>
-  <p>© 2026 GlobalCartHub | Contatto WhatsApp: +39 3791232604</p>
+  <p>© 2026 GlobalCartHub</p>
 </footer>
 
 </body>
