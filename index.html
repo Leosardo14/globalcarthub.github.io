@@ -4,43 +4,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GlobalCartHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
-    header { background: #222; color: white; padding: 15px; text-align: center; }
-    .container { padding: 20px; }
-    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 20px; }
-    .card { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-    .card img { width: 100%; border-radius: 10px; }
-    .btn { display: inline-block; margin-top: 10px; padding: 10px; background: green; color: white; text-decoration: none; border-radius: 5px; }
+    body { margin:0; font-family:'Poppins', sans-serif; background:#f8fafc; color:#0f172a; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:20px 40px; background:white; box-shadow:0 2px 10px rgba(0,0,0,0.05); }
+    header h1 { color:#0f172a; font-weight:600; }
+    nav a { margin:0 15px; text-decoration:none; color:#334155; font-weight:500; }
+    nav a:hover { color:#22c55e; }
+
+    .hero { display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:100px 20px; background:linear-gradient(135deg,#22c55e,#16a34a); color:white; }
+    .hero h2 { font-size:48px; margin-bottom:10px; }
+    .hero p { font-size:18px; margin-bottom:20px; }
+    .btn { background:white; color:#16a34a; padding:12px 25px; border-radius:30px; text-decoration:none; font-weight:600; }
+
+    .section { padding:60px 40px; max-width:1200px; margin:auto; }
+    .section h2 { text-align:center; margin-bottom:40px; }
+
+    .products { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; }
+    .card { background:white; border-radius:15px; overflow:hidden; box-shadow:0 10px 25px rgba(0,0,0,0.08); transition:0.3s; }
+    .card:hover { transform:translateY(-5px); }
+    .card img { width:100%; height:220px; object-fit:cover; }
+    .card-content { padding:15px; }
+    .card h3 { margin:10px 0; }
+    .price { color:#16a34a; font-weight:600; }
+    .buy-btn { display:block; margin-top:10px; text-align:center; background:#16a34a; color:white; padding:10px; border-radius:8px; text-decoration:none; }
+
+    footer { text-align:center; padding:30px; background:#0f172a; color:#94a3b8; margin-top:40px; }
   </style>
 </head>
 <body>
 
 <header>
   <h1>GlobalCartHub</h1>
-  <p>Il tuo shop online</p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="contatti.html">Contatti</a>
+  </nav>
 </header>
 
-<div class="container">
-  <h2>Prodotti</h2>
+<section class="hero">
+  <h2>Scopri i migliori prodotti virali</h2>
+  <p>Qualità, velocità e prezzi imbattibili</p>
+  <a class="btn" href="shop.html">Vai allo Shop</a>
+</section>
+
+<section class="section">
+  <h2>Prodotti in evidenza</h2>
   <div class="products">
 
     <div class="card">
-      <img src="https://via.placeholder.com/200" alt="Prodotto">
-      <h3>Nome Prodotto</h3>
-      <p>€19.99</p>
-      <a class="btn" href="https://wa.me/3716176195?text=Voglio%20ordinare%20questo%20prodotto" target="_blank">Ordina su WhatsApp</a>
+      <img src="https://via.placeholder.com/400x300">
+      <div class="card-content">
+        <h3>Smartwatch Pro</h3>
+        <p class="price">€39.99</p>
+        <a class="buy-btn" href="https://wa.me/3791232604ext=Voglio%20Smartwatch%20Pro">Compra ora</a>
+      </div>
     </div>
 
     <div class="card">
-      <img src="https://via.placeholder.com/200" alt="Prodotto">
-      <h3>Altro Prodotto</h3>
-      <p>€29.99</p>
-      <a class="btn" href="https://wa.me/393XXXXXXXXX?text=Voglio%20ordinare%20questo%20prodotto" target="_blank">Ordina su WhatsApp</a>
+      <img src="https://via.placeholder.com/400x300">
+      <div class="card-content">
+        <h3>Auricolari Wireless</h3>
+        <p class="price">€24.99</p>
+        <a class="buy-btn" href="https://wa.me/3791232604?text=Voglio%20Auricolari">Compra ora</a>
+      </div>
     </div>
 
   </div>
-</div>
+</section>
+
+<footer>
+  <p>© 2026 GlobalCartHub | Contatto WhatsApp: +39 3791232604</p>
+</footer>
 
 </body>
 </html>
